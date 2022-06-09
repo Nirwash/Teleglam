@@ -2,4 +2,6 @@
     <string name="app_name">Teleglam</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_default_username">Mike Taison</string>
+    <string name="settings_default_status">В сети</string>
 </resources>
