@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar
 import com.nirwashh.android.teleglam.R
 import com.nirwashh.android.teleglam.databinding.ActivityRegisterBinding
 import com.nirwashh.android.teleglam.ui.fragments.EnterPhoneNumberFragment
+import com.nirwashh.android.teleglam.utilits.replaceFragment
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var b: ActivityRegisterBinding
@@ -21,8 +22,6 @@ class RegisterActivity : AppCompatActivity() {
         toolbar = b.registerToolbar
         setSupportActionBar(toolbar)
         title = getString(R.string.register_title_your_phone)
-        supportFragmentManager.beginTransaction()
-            .add(R.id.registerDataContainer, EnterPhoneNumberFragment())
-            .commit()
+        replaceFragment(EnterPhoneNumberFragment())
     }
 }

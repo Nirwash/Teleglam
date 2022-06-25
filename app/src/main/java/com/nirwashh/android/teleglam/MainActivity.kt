@@ -8,6 +8,8 @@ import com.nirwashh.android.teleglam.activities.RegisterActivity
 import com.nirwashh.android.teleglam.databinding.ActivityMainBinding
 import com.nirwashh.android.teleglam.ui.fragments.ChatsFragment
 import com.nirwashh.android.teleglam.ui.objects.AppDrawer
+import com.nirwashh.android.teleglam.utilits.replaceActivity
+import com.nirwashh.android.teleglam.utilits.replaceFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var b: ActivityMainBinding
@@ -26,15 +28,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        if (false) {
+        if (true) {
             setSupportActionBar(toolbar)
             appDrawer.create()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.dataContainer, ChatsFragment())
-                .commit()
+            replaceFragment(ChatsFragment())
         } else {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            replaceActivity(RegisterActivity())
+
         }
 
 
