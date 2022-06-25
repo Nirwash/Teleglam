@@ -14,6 +14,10 @@
         android:theme="@style/Theme.Teleglam.Light"
         tools:targetApi="31">
         <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

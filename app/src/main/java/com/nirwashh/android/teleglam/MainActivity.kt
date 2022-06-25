@@ -1,8 +1,10 @@
 package com.nirwashh.android.teleglam
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
+import com.nirwashh.android.teleglam.activities.RegisterActivity
 import com.nirwashh.android.teleglam.databinding.ActivityMainBinding
 import com.nirwashh.android.teleglam.ui.fragments.ChatsFragment
 import com.nirwashh.android.teleglam.ui.objects.AppDrawer
@@ -24,11 +26,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        setSupportActionBar(toolbar)
-        appDrawer.create()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.dataContainer, ChatsFragment())
-            .commit()
+        if (false) {
+            setSupportActionBar(toolbar)
+            appDrawer.create()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.dataContainer, ChatsFragment())
+                .commit()
+        } else {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
